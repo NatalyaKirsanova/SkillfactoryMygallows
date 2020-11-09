@@ -1,4 +1,4 @@
-# import words_list from gallows
+import gallows
 # import pytest
 
 # def test_passing():
