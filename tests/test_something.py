@@ -1,23 +1,33 @@
-import gallows
-# import pytest
+# from gallows import getRandomWord
+import pytest
+from func_gallows import getRandomWord, getGuess,words_list,playAgain
 
-# def test_passing():
-#     assert (1, 2, 3) == (1, 2, 3)
-
-#     проверка что в списке слова
 test_list=('skillfactory', 'testing', 'blackbox', 'pytest', 'unittest', 'coverage')
-def test_words_list():
+def test_wordslist():
     for i in range(len(test_list)):
         assert isinstance(test_list[i], str)
 
-
-
 # проверка, что функция вернет слово из списка
-# def test_getRandomWord():
-#     pass
+def test_getRandomWord():
+    assert(getRandomWord(test_list) in test_list)
+
+@pytest.fixture
+def input_value():
+   input = 'k'
+   return input
+
+@pytest.fixture
+def input_again():
+   input = 'y'
+   return input
+
+def test_getGuess(input_value):
+   assert getGuess(input_value) =='k'
+
+
 # проверка функции playAgain
-# def test_playAgain():
-#     pass
+# def test_playAgain(input_again):
+#     assert
 # проверка функции displayBoard
 # def test_displayBoard():
 #     pass
