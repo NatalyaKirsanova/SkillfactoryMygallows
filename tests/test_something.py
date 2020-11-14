@@ -11,23 +11,3 @@ def test_wordslist():
 def test_getRandomWord():
     assert(getRandomWord(test_list) in test_list)
 
-@pytest.fixture
-def input_value():
-   input = 'k'
-   return input
-
-@pytest.fixture
-def input_again():
-   input = 'y'
-   return input
-
-def test_getGuess(input_value):
-   assert getGuess(input_value) =='k'
-
-
-# проверка функции playAgain
-# def test_playAgain(input_again):
-#     assert
-# проверка функции displayBoard
-# def test_displayBoard():
-#     pass
